@@ -44,19 +44,17 @@ enviar.addEventListener("click", function checar_email(e) {
 });
 
 function sendEmail(name, email, nombre, asunto, mensaje) {
+  let host = "";
   var port = window.location.port;
   if (port == "8100") {
-    var host =
-      window.location.protocol + "//" + window.location.hostname + ":3333";
+    host = window.location.protocol + "//" + window.location.hostname + ":3333";
   } else {
-    var temp = window.location.hostname.split(".");
-    var nvohost = temp[1] + "." + temp[2];
-    var host = window.location.protocol + "//" + `webmail.${nvohost}`;
+    host = window.location.protocol + "//" + `${location.hostname}`;
   }
-  console.log(host, email, nombre, asunto, mensaje, name);
+  console.log(host);
   toastr.info("Enviando mensaje", email);
   let status = 0;
-  fetch(host + `/api/sendmail`, {
+  fetch(`${host}/api/sendmail`, {
     method: "POST",
     body: JSON.stringify({
       from: email,
@@ -65,7 +63,12 @@ function sendEmail(name, email, nombre, asunto, mensaje) {
       message: mensaje,
       name,
     }),
-    headers: { "Content-Type": "application/json; charset=UTF-8" },
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      "Content-Type": "application/json",
+    },
   })
     .then((resp) => {
       status = resp.status;

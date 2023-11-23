@@ -104,15 +104,15 @@ body {
   margin: 0 1em 0 0;
 }
 .nav-btn:hover,
-.btn1:hover {
-  color: var(--accentlight-color);
+.btn1:hover   {
+  color:   var(--accentlight-color);
   background-color: transparent;
   border-color: var(--accentlight-color);
   transition: var(--tran);
 }
 /* INICIO MENU MOVIL */
 .container-menu {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }

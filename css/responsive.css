@@ -3,9 +3,9 @@
   .navbar .nav-logo {
     margin: 0 0 0 2em;
   }
-  .container-menu {
-    display: none;
-  }
+  /* .container-menu { */
+  /*   display: none; */
+  /* } */
   .container .hero {
     width: 100%;
     margin: 0 10px;
