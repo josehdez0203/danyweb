@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/img/logo1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -132,7 +133,7 @@
     <section class="container" id="Contact">
       <div class="form">
         <h1>Contacto</h1>
-        <form>
+        <form onsubmit="checar_email()">
           <div class="campo">
             <input type="text" id="nombre" value="" placeholder="Nombre" />
           </div>
@@ -140,7 +141,14 @@
             <input type="email" id="email" value="" placeholder="Email" />
           </div>
           <div class="campo">
-            <input type="text" id="asunto" value="" placeholder="Teléfono" />
+            <input
+              type="tel"
+              id="telefono"
+              value=""
+              placeholder="Teléfono"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+            />
           </div>
           <div class="campo">
             <textarea
@@ -212,4 +220,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="./js/toastr.js"></script>
   <script src="./js/main.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>
