@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root {
+  --primary-color: whitesmoke;
+  --secundary-color: #212121;
+  --accentlight-color: #3c44aa;
+  --accentdark-color: #c2abc7;
+
+  --tran: all 0.3s ease;
+}
+.dark-theme {
+  --primary-color: #212121;
+  --secundary-color: whitesmoke;
+  --accentlight-color: #c2abc7;
+  --accentdark-color: #3c44aa;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  font-family: Poppins;
+  background-color: var(--primary-color);
+  color: var(--secundary-color);
+  /* margin-top: 6em; */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px 0;
+  margin: auto;
+  max-width: 72em;
+  width: 100%;
+  color: var(--secundary-color);
+  background-color: var(--primary-color);
+  box-shadow: 2px 2px 4px var(--accentdark-color);
+}
+.navbar .nav-logo,
+.column .nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.navbar .nav-logo {
+  margin: 0 0 0 1em;
+}
+.nav-logo img {
+  height: 6em;
+}
+.navbar .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 30em;
+}
+.link a {
+  position: relative;
+  color: var(--secundary-color);
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 0 0 0.9em 0;
+  text-decoration: none;
+}
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 0.1em;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accentlight-color);
+  transition: var(--tran);
+}
+.link a:hover::after {
+  width: 100%;
+}
+.navbar .theme {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+.theme img {
+  width: 100%;
+}
+.btn {
+  width: 10em;
+  padding: 0.6em;
+  color: var(--secundary-color);
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.4em;
+  border: 0.2em solid var(--accentdark-color);
+  transition: var(--tran);
+}
+.navbar .nav-btn {
+  margin: 0 1em 0 0;
+}
+.nav-btn:hover,
+.btn1:hover   {
+  color:   var(--accentlight-color);
+  background-color: transparent;
+  border-color: var(--accentlight-color);
+  transition: var(--tran);
+}
+/* INICIO MENU MOVIL */
+.container-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.container-menu a,
+.btn-menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--accentdark-color);
+  font-size: 2rem;
+}
+.container-menu a {
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--secundary-color);
+  text-decoration: none;
+  transition: 0.5s;
+  border: 0.1em solid var(--accentdark-color);
+}
+
+.container-menu a:hover {
+  border-color: var(--light-blue);
+  transition: 0.2s;
+}
+.container-menu a i {
+  color: var(--blue);
+}
+.container-menu .btn-menu {
+  width: 2em;
+  height: 2em;
+  transition: 0.3s;
+  border: 0.1em solid var(--white);
+}
+.container-menu .btn-menu:hover,
+.active {
+  border-color: var(--accentlight-color);
+  color: var(--accentlight-color);
+  background-color: var(--accentdark-color);
+  transition: 0.2s;
+}
+.active {
+  transform: rotate(45deg);
+}
+/* FIN MENU MOVIL */
+.container {
+  margin-top: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1.5em 0;
+  margin: auto;
+  max-width: 72em;
+  width: 100%;
+}
+.container .content {
+  /* background-color: red; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 0 0 1.5em;
+}
+.content h1 {
+  color: var(--secundary-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--accentlight-color);
+}
+.content h3 {
+  color: var(--accentlight-color);
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1em 0;
+}
+.content h4 {
+  font-size: 1.6rem;
+  color: var(--accentlight-color);
+}
+.content p {
+  color: var(--secundary-color);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+.image img {
+  width: 28em;
+}
+.content ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.content ul > li {
+  margin-bottom: 10px;
+  list-style: circle;
+  line-height: 1.2;
+}
+.content .button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 2em 0 0 0;
+  width: 22em;
+}
+.button-wrapper .btn2,
+.card .btn-service {
+  /* background-color: transparent; */
+  color: var(--accentlight-color);
+  text-align: center;
+  text-decoration: none;
+}
+.button-wrapper .btn2:hover,
+.card .btn-service:hover {
+  background-color: var(--accentlight-color);
+  color: var(--primary-color);
+  transition: var(--tran);
+}
+.container .service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 4em 0 0 0;
+}
+.service .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 22em;
+  padding: 3em 1.5em;
+  cursor: pointer;
+  background-color: var(--accentdark-color);
+  border: 0.2em solid transparent;
+  border-radius: 0.5em;
+  margin: 2.5em 1em 0 1em;
+  transition: var(--tran);
+}
+.service .card:hover {
+  border-color: var(--accentlight-color);
+}
+.card .card-detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.card-detail h1,
+h3,
+p {
+  color: var(--secundary-color);
+}
+.card-detail h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+.card-detail h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+}
+.card-detail p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+}
+.card .btn-service {
+  text-transform: uppercase;
+  /* background-color: var(--accentlight-color); */
+}
+.container .form {
+  max-width: 1200px;
+  margin-top: 6rem;
+}
+.form h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--secundary-color);
+}
+.form .campo {
+  width: 300px;
+  text-align: center;
+}
+.campo input,
+.campo textarea {
+  /* background-color: red; */
+  width: 100%;
+  border: 1px solid var(--secundary-color);
+  color: var(--secundary-color);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+}
+.campo input[type="submit"] {
+  width: 150px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6em 0 0 0;
+  width: inherit;
+}
+.footer .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: inherit;
+}
+.footer-top .column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.column p {
+  color: var(--secundary-color);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0.8em 0 1.5em 0;
+}
+.column .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.column .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0.1em solid var(--secundary-color);
+  padding: 0.4em;
+  font-size: 1.25rem;
+  border-radius: 100%;
+  margin: 0 0.4em;
+  text-align: center;
+  transition: var(--tran);
+}
+.column .social a i {
+  color: var(--secundary-color);
+  font-size: 1.4rem;
+}
+.column .social a:hover {
+  background-color: var(--accentlight-color);
+  border-color: var(--accentlight-color);
+}
+.column h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 2.5em 0;
+}
+.column a {
+  text-decoration: none;
+  color: var(--secundary-color);
+  margin: 0 0 2em 0;
+  transition: var(--tran);
+}
+.column a:hover {
+  color: var(--accentlight-color);
+}
+.footer .footer-bottom {
+  margin: 2em 0 0 0;
+  padding: 0.5em 0 0 0;
+}
+.footer-bottom p {
+  color: var(--secundary-color);
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5em;
+}

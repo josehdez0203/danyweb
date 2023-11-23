@@ -1,0 +1,142 @@
+/*-- Landscap phone to portrait tablet --*/
+@media screen and (max-width: 1024px) {
+  .navbar .nav-logo {
+    margin: 0 0 0 2em;
+  }
+  /* .container-menu { */
+  /*   display: none; */
+  /* } */
+  .container .hero {
+    width: 100%;
+    margin: 0 10px;
+  }
+  .navbar .nav-btn {
+    margin: 0 2em 0 0;
+  }
+  .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 1.5em 0;
+    width: 100%;
+  }
+  .container .content {
+    margin: 1em 0 0 0;
+    padding: 0 1em;
+  }
+  .footer {
+    padding: 0;
+  }
+  .footer .footer-top {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 22em;
+  }
+  .footer-top .column {
+    margin: 2em 0 0 0;
+  }
+}
+/*--Largephones--*/
+@media screen and (max-width: 767px) {
+  /* .navbar { */
+  /*   padding: 2.5em 0; */
+  /* } */
+  .navbar .nav-logo {
+    margin: 0 0 0 1em;
+  }
+  .navbar .nav-link {
+    display: none;
+  }
+  .navbar .nav-btn {
+    margin: 0 1em 0 0;
+  }
+  .navbar .container-menu {
+    display: flex;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 1.5em 0;
+  }
+  .container .content {
+    /* margin: 1em 0 0 0; */
+    padding: 0 4rem;
+  }
+  #Service,
+  #Contact {
+    margin-top: 4em;
+  }
+
+  .container .content h1 {
+    font-size: 2em;
+  }
+  .container .content .hero img {
+    width: 100%;
+  }
+  .container .image {
+    margin: 2em 0 0 0;
+  }
+  .container .service {
+    margin: 0;
+  }
+  .footer {
+    padding: 0;
+  }
+  .footer .footer-top {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 22em;
+  }
+  .footer-top .column {
+    margin: 2em 0 0 0;
+  }
+}
+/*--Smartphones--*/
+@media screen and (max-width: 480px) {
+  .navbar .nav-logo {
+    margin: 0 0 0 1em;
+  }
+  .navbar .nav-link {
+    display: none;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container .content {
+    margin: 2em 0 0 0;
+  }
+  .content .button-wrapper {
+    width: 10em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .button-wrapper .btn2 {
+    margin: 1em 0 0 0;
+  }
+  .image img {
+    width: 22em;
+  }
+  .skill-area .skill {
+    width: 17em;
+  }
+  .container .image {
+    margin: 2em 0 0 0;
+  }
+  .container .service {
+    margin: 0;
+  }
+  .campo input,
+  .campo textarea {
+    font-size: 1.1em;
+  }
+  .footer {
+    padding: 0;
+  }
+  .footer .footer-top {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .footer-top .column {
+    margin: 2em 0 0 0;
+  }
+}
